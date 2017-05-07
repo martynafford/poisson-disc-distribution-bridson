@@ -32,7 +32,7 @@ struct point {
 //                   around a current point. This number limits the number of
 //                   attempts per point. A lower number will speed up the 
 //                   algorithm but at some cost, possibly significant, to the
-//                   results' aesthetics.
+//                   result's aesthetics.
 //
 //   start         - An optional parameter. If set to anything other than
 //                   point's default values (infinity, infinity) the algorithm 

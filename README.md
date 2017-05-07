@@ -118,7 +118,7 @@ points will never be further apart than twice this distance.
 - **max_attempts**. The algorithm stochastically attempts to place a new point
 around a current point. This number limits the number of attempts per point. A
 lower number will speed up the algorithm but at some cost, possibly significant,
-to the results' aesthetics.
+to the result's aesthetics.
 
 - **start**. An optional parameter. If set to anything other than point's 
 default values (infinity, infinity) the algorithm will start from this point.
