@@ -76,11 +76,8 @@ struct config {
 //   not done invalid memory accesses will occur and most likely a segmentation
 //   fault.
 template <typename T, typename T2, typename T3>
-void poisson_disc_distribution(
-    config conf,
-    T&& random,
-    T2&& in_area,
-    T3&& output)
+void
+poisson_disc_distribution(config conf, T&& random, T2&& in_area, T3&& output)
 {
     float cell_size = conf.min_distance / std::sqrt(2);
     int grid_width = std::ceil(conf.width / cell_size);
@@ -89,16 +86,14 @@ void poisson_disc_distribution(
     std::vector<point> grid(grid_width * grid_height);
     std::stack<point> process;
 
-    auto squared_distance = [](const point& a, const point& b)
-    {
+    auto squared_distance = [](const point& a, const point& b) {
         auto delta_x = a.x - b.x;
         auto delta_y = a.y - b.y;
 
         return delta_x * delta_x + delta_y * delta_y;
     };
 
-    auto point_around = [&conf, &random](point p)
-    {
+    auto point_around = [&conf, &random](point p) {
         auto radius = random(conf.min_distance) + conf.min_distance;
         auto angle = random(2 * M_PI);
 
@@ -108,22 +103,19 @@ void poisson_disc_distribution(
         return p;
     };
 
-    auto set = [cell_size, grid_width, &grid](const point& p)
-    {
+    auto set = [cell_size, grid_width, &grid](const point& p) {
         int x = p.x / cell_size;
         int y = p.y / cell_size;
         grid[y * grid_width + x] = p;
     };
 
-    auto add = [&process, &output, &set](const point& p)
-    {
+    auto add = [&process, &output, &set](const point& p) {
         process.push(p);
         output(p);
         set(p);
     };
 
-    auto point_too_close = [&](const point& p)
-    {
+    auto point_too_close = [&](const point& p) {
         int x_index = std::floor(p.x / cell_size);
         int y_index = std::floor(p.y / cell_size);
 
@@ -177,4 +169,3 @@ void poisson_disc_distribution(
 } // bridson namespace
 
 #endif /* BRIDSON_POISSON_DISC_DISTRIBUTION_HPP */
-

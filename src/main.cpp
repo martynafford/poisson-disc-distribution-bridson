@@ -7,7 +7,8 @@
 #include <random>
 #include "poisson_disc_distribution.hpp"
 
-int main()
+int
+main()
 {
     constexpr auto width = 80;
     constexpr auto height = 40;
@@ -27,21 +28,17 @@ int main()
     bridson::poisson_disc_distribution(
         conf,
         // random
-        [&engine, &distribution](float range)
-        {
+        [&engine, &distribution](float range) {
             return distribution(engine) * range;
         },
         // in_area
-        [](bridson::point p)
-        {
+        [](bridson::point p) {
             return p.x > 0 && p.x < width && p.y > 0 && p.y < height;
         },
         // output
-        [&map](bridson::point p)
-        {
+        [&map](bridson::point p) {
             map[static_cast<int>(p.y)][static_cast<int>(p.x)] = '.';
-        }
-    );
+        });
 
     for (auto& row : map) {
         for (auto& cell : row) {
@@ -53,4 +50,3 @@ int main()
 
     return EXIT_SUCCESS;
 }
-
