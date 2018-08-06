@@ -1,4 +1,4 @@
-// Copyright (c) 2017 Martyn Afford
+// Copyright (c) 2018 Martyn Afford
 // Licensed under the MIT licence
 
 #ifndef BRIDSON_POISSON_DISC_DISTRIBUTION_HPP

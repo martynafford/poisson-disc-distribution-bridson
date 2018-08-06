@@ -9,7 +9,7 @@ result is more aesthetically pleasing than uniform or jittered-grid approaches.
 ![Poisson disc distribution](example.png)
 
 This code is a header-only, C++11 implementation of Bridson's
-["Fast Poisson Disk Sampling in Arbitrary Dimensions"](http://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf) 
+["Fast Poisson Disk Sampling in Arbitrary Dimensions"](http://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf)
 in two-dimensions.
 
 ## Integration
@@ -156,10 +156,10 @@ This reference text is available as comments in the source code.
 
 Licensed under the [MIT Licence](http://opensource.org/licenses/MIT):
 
-Copyright &copy; 2017 [Martyn Afford](http://mafford.com)
+Copyright &copy; 2018 [Martyn Afford](http://mafford.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the “Software”), to deal in
+this software and associated documentation files (the "Software"), to deal in
 the Software without restriction, including without limitation the rights to
 use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
 the Software, and to permit persons to whom the Software is furnished to do so,
@@ -168,7 +168,7 @@ subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
