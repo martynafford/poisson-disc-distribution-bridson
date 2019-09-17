@@ -94,7 +94,7 @@ poisson_disc_distribution(config conf, T&& random, T2&& in_area, T3&& output)
     };
 
     auto point_around = [&conf, &random](point p) {
-        auto radius = random(conf.min_distance) + conf.min_distance;
+        auto radius = conf.min_distance * std::sqrt(random(3) + 1);
         auto angle = random(2 * M_PI);
 
         p.x += std::cos(angle) * radius;
