@@ -1,4 +1,4 @@
-// Copyright (c) 2018 Martyn Afford
+// Copyright (c) 2019 Martyn Afford
 // Licensed under the MIT licence
 
 #include <chrono>
